@@ -9,14 +9,14 @@
 <link rel="stylesheet"
 	href="${root}/resources/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="${root}/static/assist/assets/css/font-awesome.min.css" />
-<link rel="stylesheet" href="${root}/static/assist/assets/css/ace.min.css" />
-<link rel="stylesheet" href="${root}/static/assist/assets/css/ace-rtl.min.css" />
-<script type="text/javascript" src="${root}/static/assist/bootstrap_v2/jquery/jquery-1.8.3.min.js"
+	href="${root}/resources/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${root}/resources/css/ace.min.css" />
+<link rel="stylesheet" href="${root}/resources/css/ace-rtl.min.css" />
+<script type="text/javascript" src="${root}/resources/js/jquery-1.8.3.min.js"
 	charset="UTF-8"></script>
 <script type="text/javascript"
-	src="${root}/static/assist/myActicity/js/jquery.cookie.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${root}/static/js/md5.js"></script>
+	src="${root}/resources/js/jquery.cookie.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/js/md5.js"></script>
 </head>
 
 <body class="login-layout">
@@ -100,11 +100,11 @@
 	</div>
 	<!-- /.main-container -->
 	<script type="text/javascript" >
-		window.jQuery || document.write("<script src='${root}/assist/assets/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
+		window.jQuery || document.write("<script src='${root}/resources/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
 	</script>
 	
 	<script type="text/javascript">
-		if ("ontouchend" in document) document.write("<script src='${root}/assist/assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+		if ("ontouchend" in document) document.write("<script src='${root}/resources/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 	</script>
 	<script type="text/javascript">
 		if(window !=top){  
@@ -112,7 +112,7 @@
 		}  
 	</script>
 	<!-- inline scripts related to this page -->
-	<script type="text/javascript"  src="${root}/static/assist/myActicity/js/login.js" charset="UTF-8" ></script>	
+	<script type="text/javascript"  src="${root}/resources/js/login.js" charset="UTF-8" ></script>
 	<script type="text/javascript">
 		function show_box(id) {
 			jQuery('.widget-box.visible').removeClass('visible');
