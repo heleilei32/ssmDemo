@@ -7,7 +7,7 @@
 <%@ include file="/base/meta.html"%>
 <title>登录页面</title>
 <link rel="stylesheet"
-	href="${root}/static/assist/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	href="${root}/resources/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="${root}/static/assist/assets/css/font-awesome.min.css" />
 <link rel="stylesheet" href="${root}/static/assist/assets/css/ace.min.css" />

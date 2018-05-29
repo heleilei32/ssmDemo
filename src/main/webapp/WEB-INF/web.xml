@@ -23,6 +23,7 @@
     </listener>
 
 
+
     <!-- 编码过滤器 -->
     <filter>
         <filter-name>encodingFilter</filter-name>
@@ -51,6 +52,11 @@
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
     </listener>
 
+    <!--静态资源js-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/resources/*</url-pattern>
+    </servlet-mapping>
 
     <!-- Spring MVC 核心配置开始 -->
     <servlet>
@@ -78,9 +84,8 @@
 
     <!-- 配置SESSION超时，单位是分钟 -->
     <session-config>
-        <session-timeout>15</session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
-
 
     <error-page>
         <error-code>404</error-code>
@@ -91,8 +96,6 @@
         <error-code>500</error-code>
         <location>/WEB-INF/page/error/500.jsp</location>
     </error-page>
-
-
 
 
 </web-app>
