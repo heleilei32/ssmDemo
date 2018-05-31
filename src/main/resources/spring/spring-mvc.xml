@@ -12,6 +12,23 @@
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	<context:component-scan base-package="com.dc.controller" />
 
+
+
+
+	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 拦截器拦截的URL格式 -->
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/login"/>
+			<mvc:exclude-mapping path="/loginLogicAction"/>
+			<!-- 处理拦截的具体实现类 -->
+			<bean class="com.dc.interceptor.AuthInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+
+
 	<mvc:annotation-driven>
 		<mvc:message-converters>
 			<bean id="jsonConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">

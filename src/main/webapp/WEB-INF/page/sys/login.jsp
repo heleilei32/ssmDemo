@@ -7,16 +7,16 @@
 <%@ include file="/base/meta.html"%>
 <title>登录页面</title>
 <link rel="stylesheet"
-	href="${root}/resources/css/bootstrap.min.css">
+	href="${root}/resources/sys/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="${root}/resources/css/font-awesome.min.css" />
-<link rel="stylesheet" href="${root}/resources/css/ace.min.css" />
-<link rel="stylesheet" href="${root}/resources/css/ace-rtl.min.css" />
-<script type="text/javascript" src="${root}/resources/js/jquery-1.8.3.min.js"
+	href="${root}/resources/sys/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${root}/resources/sys/css/ace.min.css" />
+<link rel="stylesheet" href="${root}/resources/sys/css/ace-rtl.min.css" />
+<script type="text/javascript" src="${root}/resources/sys/js/jquery-1.8.3.min.js"
 	charset="UTF-8"></script>
 <script type="text/javascript"
-	src="${root}/resources/js/jquery.cookie.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${root}/resources/js/md5.js"></script>
+		src="${root}/resources/sys/js/jquery.cookie.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/md5.js"></script>
 </head>
 
 <body class="login-layout">
@@ -27,7 +27,7 @@
 					<div class="login-container">
 						<div class="center">
 							<h1>
-								<i class="icon-leaf green"></i> <span class="red">浙江活动</span>
+								<i class="icon-leaf green"></i> <span class="red">XX活动</span>
 								<span class="white">管理系统</span>
 							</h1>
 							<h4 class="blue">Copy Right© 上海刀传网络</h4>
@@ -104,7 +104,7 @@
 	</script>
 	
 	<script type="text/javascript">
-		if ("ontouchend" in document) document.write("<script src='${root}/resources/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+		if ("ontouchend" in document) document.write("<script src='${root}/resources/sys/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 	</script>
 	<script type="text/javascript">
 		if(window !=top){  
@@ -112,7 +112,7 @@
 		}  
 	</script>
 	<!-- inline scripts related to this page -->
-	<script type="text/javascript"  src="${root}/resources/js/login.js" charset="UTF-8" ></script>
+	<script type="text/javascript" src="${root}/resources/sys/js/login.js" charset="UTF-8" ></script>
 	<script type="text/javascript">
 		function show_box(id) {
 			jQuery('.widget-box.visible').removeClass('visible');
