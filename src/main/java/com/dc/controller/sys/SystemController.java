@@ -29,8 +29,6 @@ public class SystemController {
     }
 
 
-    private static final String curKey = "curAdmin";
-
     /**
      * 登录
      * @param cname
@@ -45,7 +43,7 @@ public class SystemController {
     public String loginLogicAction(String cname, String cpasswd, Model model, HttpServletRequest request, HttpServletResponse response,HttpSession session){
 
         SysAdmin sysAdmin = null;
-        if (StringUtils.isEmpty(cname)){
+        if (!StringUtils.isEmpty(cname)){
             SysAdmin param = new SysAdmin();
             param.setAdmin(cname);
             sysAdmin = systemService.selectOne(param);
@@ -56,6 +54,7 @@ public class SystemController {
             //单点登录需要用到 sessionId 之前做的有问题
             System.out.printf("sessionID是:"+session.getId());
             session.setAttribute(SysAdmin.SysAdminStatus.SESSION_LOGINUSER,sysAdmin);
+            model.addAttribute("curAdminName",sysAdmin.getAdmin());
             return "/sys/NavigationBar";
 
         }else{

@@ -115,7 +115,7 @@
 
 						<ul class="submenu">
 							<li>
-								<a id="console" href="javascript:void(0)" onclick="setIframeSrc('${root}/consoleDataAction','控制台 ','控制台',this)">
+								<a id="console" href="javascript:void(0)" onclick="setIframeSrc('${root}/sys/consoleDataAction','控制台 ','控制台',this)">
 									<i class="icon-double-angle-right"></i> 控制台
 								</a>
 							</li>

@@ -7,39 +7,39 @@
 <head>
 <%@ include file="/base/meta.html"%>
     <title>控制台-chart图表</title>
-<script type="text/javascript" src="${root}/static/js/laydate/laydate.js"></script>
-<script type="text/javascript" src="${root}/static/js/dcCommon.js"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/laydate.js"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/dcCommon.js"></script>
 
 <!-- ace -->
-<link rel="stylesheet" href="${root}/static/assist/assets/css/font-awesome.min.css" />
-<link rel="stylesheet" href="${root}/static/assist/assets/css/ace.min.css" />
-<link rel="stylesheet" href="${root}/static/assist/assets/css/ace-rtl.min.css" />
-<script src="${root}/static/assist/assets/js/ace-extra.min.js"></script>
+<link rel="stylesheet" href="${root}/resources/sys/css/font-awesome.min.css" />
+<link rel="stylesheet" href="${root}/resources/sys/css/ace.min.css" />
+<link rel="stylesheet" href="${root}/resources/sys/css/ace-rtl.min.css" />
+<script src="${root}/resources/sys/js/ace-extra.min.js"></script>
 
 <%--<link rel="stylesheet" href="${root}/static/assist/bootstrap-3.3.7-dist/css/bootstrap.css">--%>
-<link rel="stylesheet" href="${root}/static/assist/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="${root}/resources/sys/css/bootstrap.min.css">
 <%--<link rel="stylesheet" href="${root}/static/assist/bootstrap_v2/bootstrap/css/bootstrap.min.css" >--%>
-<link rel="stylesheet" href="${root}/static/assist//jquery-confirm/css/jquery-confirm.css">
-<link rel="stylesheet" href="${root}/static/assist/myActicity/css/common.css">
+<link rel="stylesheet" href="${root}/resources/sys/css/jquery-confirm.css">
+<link rel="stylesheet" href="${root}/resources/sys/css/common.css">
 
-<script type="text/javascript" src="${root}/static/assist/bootstrap_v2/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${root}/static/assist/bootstrap_v2/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${root}/static/assist/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 
 <!-- bootstrap-table -->
-<link rel="stylesheet" href="${root}/static/assist/bootstrap-table/bootstrap-table.css">
-<script src="${root}/static/assist/bootstrap-table/bootstrap-table.js"></script>
-<script src="${root}/static/assist/bootstrap-table/bootstrap-table-export.js"></script>
-<script src="${root}/static/assist/bootstrap-table/tableExport.js"></script>
-<script src="${root}/static/assist/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-<script type="text/javascript" src="${root}/static/assist//jquery-confirm/js/jquery-confirm.js" charset="UTF-8"></script>
-<script src="${root}/static/assist/bootstrap-table/bootstrap-table-resizable.js"></script>
-<script src="${root}/static/assist/bootstrap-table/colResizable-1.5.source.js"></script>
+<link rel="stylesheet" href="${root}/resources/sys/css/bootstrap-table.css">
+<script src="${root}/resources/sys/js/bootstrap-table.js"></script>
+<script src="${root}/resources/sys/js/bootstrap-table-export.js"></script>
+<script src="${root}/resources/sys/js/tableExport.js"></script>
+<script src="${root}/resources/sys/js/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/jquery-confirm.js" charset="UTF-8"></script>
+<script src="${root}/resources/sys/js/bootstrap-table-resizable.js"></script>
+<script src="${root}/resources/sys/js/colResizable-1.5.source.js"></script>
 
 <!-- chart js -->
-<script type="text/javascript" src="${root}/static/assist/chart/Chart.bundle.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${root}/static/assist/chart/utils.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${root}/static/assist/chart/chartjs-plugin-zoom.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/Chart.bundle.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/utils.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/js/chartjs-plugin-zoom.js" charset="UTF-8"></script>
 
 <script type="text/javascript" src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
 <script type="text/javascript" src="http://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
@@ -47,7 +47,7 @@
 </head>
 <body onload="IFrameResize()">
 <div class="container-fluid">
-<form id="formID" action="${root}/consoleDataAction" method="post" class="form-horizontal">
+<form id="formID" action="${root}/sys/consoleDataAction" method="post" class="form-horizontal">
 <div class="row" style="margin-top: 20px">
 	<label class="col-sm-1 control-label " for="beginTime" style="font-weight:normal">开始</label>
 	<div class="col-sm-2 ">
@@ -70,7 +70,7 @@
 		<button type="submit" class="btn btn-success" title="生成图表"><span class="glyphicon glyphicon-ok">生成图表</span> </button>
 	</div>
 	<div class="col-sm-1 text-right">
-		<a class=" btn btn-primary" id="" target="_blank" href="${root}/consoleDataAction">
+		<a class=" btn btn-primary" id="" target="_blank" href="${root}/sys/consoleDataAction">
 			<span class="glyphicon glyphicon-paperclip">新页面</span>
 		</a>
 	</div>

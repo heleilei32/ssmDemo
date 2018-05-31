@@ -1,0 +1,187 @@
+﻿.table-head{
+	padding-right:0px;
+	background-color:#F2F2F2;
+	color:#000;
+	width:auto;
+}
+.table-body{
+	/*width:100%; */
+	/*height:520px;*/
+	/*overflow-y:scroll;*/
+}
+.table-head table,.table-body table{
+	/*width:100%;*/
+	}
+.table-body table tr:nth-child(2n+1){background-color:#F9F9F9;}
+.table-all-hold{
+	/*padding-right:0px;*/
+	color:#000;
+	/*width: 100%;*//*固定一个总的宽度包含整个显示结果部分*/
+	overflow-y:scroll;
+}
+
+.searchHold-addtemplate {
+	background-color: #F5F5F5;
+	height:400px;
+	padding-top:0px;
+	padding-left:10px;
+	padding-right:30px;
+	padding-bottom:25px;
+	border:1px solid #999999;
+	margin-top:-15px;
+	margin-bottom:20px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+.searchHold {
+	background-color: #F9F9F9;
+	/*width: 1160px;*/
+	padding-top:15px;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:15px;
+	border:1px solid #D3D3D3;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+td{
+align:left;
+}
+
+.datapage{
+<!--	border:1px solid #999999;-->
+<!--	background-color: #F5F5F5;-->
+	width: 1160px;
+	padding-top:5px;
+	padding-right:5px;
+	padding-bottom:5px;
+	text-align:right;
+}
+
+.remark-info{
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    width: 12em;/*不允许出现半汉字截断*/
+    border:none;
+    outline: 0px; 
+}
+.prizename {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    width: 10em;/*不允许出现半汉字截断*/
+<!--    border:1px #ff8000 solid ;-->
+}
+.prizedescribe {
+    overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+    width: 14em;/*不允许出现半汉字截断*/
+<!--    border:1px #ff8000 dashed;-->
+    margin: 0px;
+}
+.prizedmark {
+<!--    overflow: hidden; /*自动隐藏文字*/-->
+    white-space: nowrap;/*强制不换行*/
+<!--    width: 10em;/*不允许出现半汉字截断*/-->
+<!--    text-overflow: ellipsis;/*文字隐藏后添加省略号*/-->
+<!--    border:1px #ff8000 dashed;-->
+<!--    margin: 0px;-->
+}
+.modal-table{
+border-collapse:separate;border-spacing:20px;
+}
+.modal-tr{
+border-bottom:1px #fff solid;
+}
+
+<!--优化radio和checkbox控件 http://www.cnblogs.com/kuikui/p/3506365.html-->
+*{margin:0px;padding:0px;}
+.checkbox,.radio{display: inline-block;*display: inline;*zoom:1;height: 24px; line-height: 24px; margin-right: 20px;}
+.checkbox ins,.radio ins{display: inline-block;*display: inline;*zoom:1; width: 23px; height: 22px; vertical-align: middle; background: url(http://www.bootcss.com/p/icheck/skins/square/blue.png) no-repeat; margin-right: 8px; -webkit-transition:all 0.1s linear; -moz-transition:all 0.1s linear; -o-transition:all 0.1s linear; -ms-transition:all 0.1s linear; transition:all 0.1s linear;vertical-align: middle;}
+.checkbox ins{background-position: 0px 0px; }
+.radio ins{background-position: -120px 0px; }
+.checkbox .hover{background-position: -24px 0px; }
+.checkbox .checked{background-position: -48px 0px; }
+.checkbox .enable{background-position: -96px 0px;}
+.checkbox .disabled{background-position: -72px 0px;}
+.radio .hover{background-position: -144px 0px;}
+.radio .checked{background-position: -168px 0px;}
+.radio .enable{background-position: -214px 0px;}
+.radio .disabled{background-position: -191px 0px;}
+.checkbox span,.radio span{display: inline-block;*display: inline;*zoom:1;vertical-align: middle; }
+.sport,.sex{width: 1150px; margin: 20px auto;}
+
+<!--upload file-->
+.file {
+    position: relative;
+    display: inline-block;
+    background: #D0EEFF;
+    border: 1px solid #99D3F5;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+
+/*a  upload */
+.a-upload {
+    padding: 4px 10px;
+    height: 30px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+
+.a-upload input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 100px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
