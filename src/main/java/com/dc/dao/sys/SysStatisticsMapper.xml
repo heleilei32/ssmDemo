@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dc.dao.sys.SysStatisticsMapper" >
+  <resultMap id="BaseResultMap" type="com.dc.entity.sys.pojo.SysStatistics" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="c_id" property="id" jdbcType="INTEGER" />
+    <result column="c_type" property="type" jdbcType="INTEGER" />
+    <result column="c_time" property="time" jdbcType="TIMESTAMP" />
+    <result column="c_uv" property="uv" jdbcType="INTEGER" />
+    <result column="c_pv" property="pv" jdbcType="INTEGER" />
+    <result column="c_old_user_order" property="oldUserOrder" jdbcType="INTEGER" />
+    <result column="c_old_user_no_order" property="oldUserNoOrder" jdbcType="INTEGER" />
+    <result column="c_new_user_order" property="newUserOrder" jdbcType="INTEGER" />
+    <result column="c_new_user_no_order" property="newUserNoOrder" jdbcType="INTEGER" />
+    <result column="c_new_user_probability" property="newUserProbability" jdbcType="REAL" />
+    <result column="c_send_order_count" property="sendOrderCount" jdbcType="INTEGER" />
+    <result column="c_order_succeed_count" property="orderSucceedCount" jdbcType="INTEGER" />
+    <result column="c_unsubscribe_count" property="unsubscribeCount" jdbcType="INTEGER" />
+    <result column="c_order_probability" property="orderProbability" jdbcType="REAL" />
+    <result column="c_month_user_arrive_mz" property="monthUserArriveMz" jdbcType="INTEGER" />
+    <result column="c_month_user_arrive_jz" property="monthUserArriveJz" jdbcType="INTEGER" />
+    <result column="c_detail" property="detail" jdbcType="VARCHAR" />
+  </resultMap>
+
+
+  <!-- 查询统计集合的数量 -->
+  <select id="allCount" resultType="int">
+    select count(*) from sys_statistics where
+    <if test="type != -1">
+      c_type = #{type} and
+    </if>
+    (c_time &gt;= #{beginTime} and c_time &lt;= #{endTime})
+  </select>
+
+  <!-- 查询统计集合 -->
+  <select id="select1" resultMap="BaseResultMap">
+    select * from sys_statistics where
+    <if test="type != -1">
+      c_type = #{type} and
+    </if>
+    (c_time &gt;= #{beginTime} and c_time &lt;= #{endTime})
+    order by c_time desc
+    limit #{index},#{count}
+  </select>
+</mapper>

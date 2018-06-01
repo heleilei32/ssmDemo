@@ -1,6 +1,6 @@
 package com.dc.service.sys;
 
-import com.dc.entity.pojo.SysAdmin;
+import com.dc.entity.sys.pojo.SysAdmin;
 
 public interface SystemService {
 

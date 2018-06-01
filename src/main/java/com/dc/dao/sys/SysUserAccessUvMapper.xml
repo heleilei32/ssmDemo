@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dc.dao.sys.SysUserAccessUvMapper" >
+  <resultMap id="BaseResultMap" type="com.dc.entity.sys.pojo.SysUserAccessUv" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="c_id" property="id" jdbcType="INTEGER" />
+    <result column="c_userID" property="userid" jdbcType="VARCHAR" />
+    <result column="c_access_time" property="accessTime" jdbcType="TIMESTAMP" />
+    <result column="c_access_count" property="accessCount" jdbcType="INTEGER" />
+    <result column="c_access_ip" property="accessIp" jdbcType="VARCHAR" />
+  </resultMap>
+
+    <!-- 把数据库和bean里面进行映射 -->
+    <resultMap type="com.dc.entity.sys.dto.TimeInterval" id="timeIntervalMap">
+        <result property="hours" column="myHour" />
+        <result property="count" column="myCount" />
+    </resultMap>
+
+
+  <!-- 查询UV24小时的时间间隔数据 -->
+  <select id="selectUV24TimeInterval" resultMap="timeIntervalMap">
+		select
+		date_format( c_access_time, "%H" ) as myHour,count(distinct(c_userID))
+		as myCount
+		from sys_user_access_pv where
+		c_access_time &gt;= #{beginTime}
+		and
+		c_access_time &lt;= #{endTime}
+		group by date_format( c_access_time, "%H" )
+	</select>
+</mapper>

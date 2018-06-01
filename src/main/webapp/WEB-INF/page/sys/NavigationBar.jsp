@@ -437,7 +437,7 @@
 		$(document).ready(function() {
 			$("#consoleModule").click();//默认是控制台显示
 			$("#console").click();//默认是控制台显示
-			setIframeSrc('${root}/consoleDataAction', '控制台模块 ', '控制台', '#console');
+			setIframeSrc('${root}/sys/consoleDataAction', '控制台模块 ', '控制台', '#console');
 		});
 	</script>
 </body>

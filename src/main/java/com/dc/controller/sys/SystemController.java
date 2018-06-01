@@ -1,7 +1,6 @@
 package com.dc.controller.sys;
 
-import com.dc.Tools.DCLog;
-import com.dc.entity.pojo.SysAdmin;
+import com.dc.entity.sys.pojo.SysAdmin;
 import com.dc.service.sys.SystemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -52,7 +51,6 @@ public class SystemController {
 
         if (sysAdmin != null && cpasswd.equals(sysAdmin.getPassword())) {
             //单点登录需要用到 sessionId 之前做的有问题
-            System.out.printf("sessionID是:"+session.getId());
             session.setAttribute(SysAdmin.SysAdminStatus.SESSION_LOGINUSER,sysAdmin);
             model.addAttribute("curAdminName",sysAdmin.getAdmin());
             return "/sys/NavigationBar";

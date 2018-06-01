@@ -1,6 +1,6 @@
 package com.dc.interceptor;
 
-import com.dc.entity.pojo.SysAdmin;
+import com.dc.entity.sys.pojo.SysAdmin;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

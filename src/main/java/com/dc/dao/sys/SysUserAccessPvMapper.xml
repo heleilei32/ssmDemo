@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dc.dao.sys.SysUserAccessPvMapper" >
+  <resultMap id="BaseResultMap" type="com.dc.entity.sys.pojo.SysUserAccessPv" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="c_id" property="id" jdbcType="INTEGER" />
+    <result column="c_userID" property="userid" jdbcType="VARCHAR" />
+    <result column="c_access_time" property="accessTime" jdbcType="TIMESTAMP" />
+    <result column="c_access_ip" property="accessIp" jdbcType="VARCHAR" />
+    <result column="c_source" property="source" jdbcType="VARCHAR" />
+  </resultMap>
+
+    <!-- 把数据库和bean里面进行映射 -->
+    <resultMap type="com.dc.entity.sys.dto.TimeInterval" id="timeIntervalMap">
+        <result property="hours" column="myHour" />
+        <result property="count" column="myCount" />
+    </resultMap>
+
+  <!-- 查询24小时的时间间隔数据 -->
+  <select id="select24TimeInterval" resultMap="timeIntervalMap">
+		select date_format(
+		c_access_time, "%H" ) as myHour,count(*) as myCount
+		from
+		sys_user_access_pv where
+		c_access_time &gt;= #{beginTime}
+		and
+		c_access_time &lt;= #{endTime}
+		group by date_format( c_access_time, "%H" )
+	</select>
+
+
+    <!-- 查询集合数量 -->
+    <select id="allCount" resultType="int">
+        select count(*) from sys_user_access_pv where
+        <if test="userName != null">
+            c_userID like concat('%',#{userName},'%') and
+        </if>
+        <if test="ip != null">
+            c_access_ip like concat('%',#{ip},'%') and
+        </if>
+        <if test="source != null">
+            c_source like concat('%',#{source},'%') and
+        </if>
+        c_access_time &gt;=#{beginTime} and c_access_time &lt;=#{endTime}
+    </select>
+
+
+    <!-- 更具pv数量得到uv数量 -->
+    <select id="accordingToPVGetsUV" resultType="int">
+		select
+		count(distinct(c_userID)) from
+		sys_user_access_pv where
+		c_access_time &gt;= #{beginTime} and c_access_time &lt;= #{endTime}
+	</select>
+</mapper>
