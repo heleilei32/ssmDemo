@@ -7,7 +7,7 @@
 <head>
 <%@ include file="/base/meta.html"%>
     <title>控制台-chart图表</title>
-<script type="text/javascript" src="${root}/resources/sys/js/laydate.js"></script>
+<script type="text/javascript" src="${root}/resources/sys/plugin/laydate/laydate.js"></script>
 <script type="text/javascript" src="${root}/resources/sys/js/dcCommon.js"></script>
 
 <!-- ace -->
@@ -24,7 +24,7 @@
 
 <script type="text/javascript" src="${root}/resources/sys/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="${root}/resources/sys/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="${root}/resources/sys/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${root}/resources/sys/plugin/datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 
 <!-- bootstrap-table -->
 <link rel="stylesheet" href="${root}/resources/sys/css/bootstrap-table.css">
